@@ -1,3 +1,8 @@
-export const title = {
-  template: require('./title.html')
+import template from './title.html';
+
+const titleComponent = {
+  restrict: 'E',
+  template,
 };
+
+export default titleComponent;

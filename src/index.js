@@ -1,15 +1,12 @@
 import angular from 'angular';
+import uiRouter from 'angular-ui-router';
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
-
-import {techsModule} from './app/techs/index';
-import 'angular-ui-router';
 import routesConfig from './routes';
-
-import {main} from './app/main';
-import {header} from './app/header';
-import {title} from './app/title';
-import {footer} from './app/footer';
+import main from './app/main/main';
+import header from './app/header/header';
+import title from './app/title';
+import footer from './app/footer/footer';
 
 import './index.scss';
 
@@ -17,9 +14,9 @@ import './index.scss';
 UIkit.use(Icons);
 
 angular
-  .module('app', [techsModule, 'ui.router'])
+  .module('app', [uiRouter])
   .config(routesConfig)
   .component('app', main)
-  .component('fountainHeader', header)
+  .component('noltflixHeader', header)
   .component('fountainTitle', title)
   .component('fountainFooter', footer);

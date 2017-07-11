@@ -1,0 +1,26 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "class-methods-use-this": ["off"],
+    "func-names": ["error", "never"],
+    "linebreak-style": 0,
+    "no-param-reassign": ["error", { "props": false }],
+    "no-underscore-dangle": 0,
+    "no-unused-expressions": ["error", { "allowShortCircuit": true }]
+  },
+  "globals": {
+    "jQuery": true,
+    "$": true,
+    "_": true,
+    "setTimeout": true,
+    "clearTimeout": true,
+    "console": true,
+    "window": true,
+    "document": true,
+    "navigator": true,
+    "opr": true
+  },
+  "envs": [
+    "browser", "es6"
+  ]
+}

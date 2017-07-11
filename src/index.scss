@@ -2,10 +2,26 @@
 @import "node_modules/uikit/src/scss/mixins.scss";
 @import "node_modules/uikit/src/scss/uikit.scss";
 
+/* Colors */
+$black-25: rgba(0, 0, 0, 0.25);
+$charcoal-grey: #32363c;
+$charcoal-grey-two: #373e4a;
+$charcoal-grey-three: #282b31;
+$dark-grey: #1b1d1f;
+$deep-red: #a30000;
+$red: #d00000;
+$sunflower-yellow: #ffcd00;
+$white: #ffffff;
+
+/* Components */
+@import './app/header/header';
+@import './app/footer/footer';
+
 html, body, #root {
   margin: 0;
   height: 100%;
   font-family: 'Open Sans', sans-serif;
+  background-color: $charcoal-grey-three;
 }
 
 body, h1, h2, h3 {

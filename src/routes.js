@@ -1,4 +1,4 @@
-export default routesConfig;
+
 
 /** @ngInject */
 function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -8,6 +8,8 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('app', {
       url: '/',
-      component: 'app'
+      component: 'app',
     });
 }
+
+export default routesConfig;
