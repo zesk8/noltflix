@@ -3,10 +3,13 @@ import uiRouter from 'angular-ui-router';
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
 import routesConfig from './routes';
-import main from './app/main/main';
-import header from './app/header/header';
-import title from './app/title';
-import footer from './app/footer/footer';
+import main from './app/main/main.component';
+import header from './app/header/header.component';
+import footer from './app/footer/footer.component';
+import favorites from './app/favorites/favorites.component';
+import card from './app/card/card.component';
+import movieShow from './app/movie-show/movie-show.component';
+import search from './app/search/search.component';
 
 import './index.scss';
 
@@ -16,7 +19,14 @@ UIkit.use(Icons);
 angular
   .module('app', [uiRouter])
   .config(routesConfig)
-  .component('app', main)
+  .run(($rootScope) => {
+    // @todo: Delete and replace storedMovieShows for DB store
+    $rootScope.storedMovieShows = {};
+  })
+  .component('noltflixMain', main)
   .component('noltflixHeader', header)
-  .component('fountainTitle', title)
-  .component('fountainFooter', footer);
+  .component('noltflixFooter', footer)
+  .component('noltflixFavorites', favorites)
+  .component('noltflixCard', card)
+  .component('noltflixMovieShow', movieShow)
+  .component('noltflixSearch', search);

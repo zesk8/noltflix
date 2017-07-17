@@ -1,19 +1,19 @@
 import angular from 'angular';
 import 'angular-mocks';
-import {header} from './header';
+import header from './header.component';
 
 describe('header component', () => {
   beforeEach(() => {
     angular
-      .module('fountainHeader', ['app/header.html'])
-      .component('fountainHeader', header);
-    angular.mock.module('fountainHeader');
+      .module('noltflixHeader', ['app/header/header.html'])
+      .component('noltflixHeader', header);
+    angular.mock.module('noltflixHeader');
   });
 
-  it('should render \'Fountain Generator\'', angular.mock.inject(($rootScope, $compile) => {
-    const element = $compile('<fountain-header></fountain-header>')($rootScope);
+  it('should render username', angular.mock.inject(($rootScope, $compile) => {
+    const element = $compile('<noltflix-header></noltflix-header>')($rootScope);
     $rootScope.$digest();
-    const header = element.find('a');
-    expect(header.html().trim()).toEqual('Fountain Generator');
+    const headerUsername = element[0].querySelectorAll('.noltflix-header__user-list-name');
+    expect(headerUsername[0].innerHTML).toEqual('Jhon Smith');
   }));
 });

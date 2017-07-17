@@ -1,0 +1,45 @@
+.noltflix-search {
+  background-color: $strong-red;
+  height: 55px;
+  margin: 0;
+  width: 276px;
+
+  .noltflix__dropdown {
+    left: 0 !important;
+    width: 100%;
+  }
+
+  &__icon {
+    background: url('/images/icon-search.svg');
+    cursor: pointer;
+    height: 24px;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    width: 24px;
+  }
+
+  .uk-search,
+  .uk-search-input {
+    height: 100%;
+    width: 100%;
+  }
+
+  .uk-search-input {
+    background-color: transparent;
+    color: $white;
+    font-family: Avenir;
+    font-size: 16px;
+    opacity: 0.5;
+    padding: 0 60px 0 25px;
+
+    &::placeholder {
+      color: $white;
+      opacity: 0.5;
+    }
+
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}

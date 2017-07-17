@@ -1,0 +1,19 @@
+<div class="uk-margin noltflix-search">
+  <form class="uk-search">
+      <input class="uk-search-input"
+        type="search"
+        placeholder="Search Media"
+        ng-model="$ctrl.title">
+      <span class="noltflix-search__icon" ng-click="::$ctrl.search()"></span>
+      <ul ng-hide="!$ctrl.listResult.url"
+        class="noltflix__dropdown"
+        uk-dropdown="mode: click">
+        <li class="noltflix__dropdown-element">
+          <a class="noltflix__dropdown-link"
+            ng-href="{{::$ctrl.listResult.url}}">
+            {{::$ctrl.listResult.title}}
+          </a>
+        </li>
+      </ul>
+  </form>
+</div>

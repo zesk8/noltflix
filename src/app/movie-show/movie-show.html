@@ -1,0 +1,34 @@
+<div class="noltflix-movie-show" ng-style="{'background-image':'url({{::$ctrl.movieShowInfo.poster}})'}">
+  <div class="noltflix-movie-show__info">
+    <div class="noltflix-movie-show__info-head">
+      <a class="noltflix__back" href="/favorites"></a>
+      <h2 class="noltflix__title">{{::$ctrl.movieShowInfo.show_title}}</h2>
+      <span class="noltflix__heart"
+        ng-class="{
+          'noltflix__heart--empty': !$ctrl.movieShowInfo.isStored
+        }"
+        ng-click="::$ctrl.addFavorite()"></span>
+    </div>
+    <div class="noltflix-movie-show__info-release">
+      <span>Movie Release Year: {{::$ctrl.movieShowInfo.release_year}}</span>
+      <span>Runtime: {{::$ctrl.movieShowInfo.runtime}}</span>
+    </div>
+    <div class="noltflix-movie-show__info-rate">
+      <span class="noltflix__star noltflix__star--complete"></span>
+      <span class="noltflix__star noltflix__star--complete"></span>
+      <span class="noltflix__star noltflix__star--complete"></span>
+      <span class="noltflix__star noltflix__star--complete"></span>
+      <span class="noltflix__star noltflix__star--empty"></span>
+    </div>
+    <div class="noltflix__badge">
+      <span class="noltflix__badge-text">{{::$ctrl.movieShowInfo.category}}</span>
+    </div>
+    <h4 class="noltflix__inner-title">Director</h4>
+    <p class="noltflix__paragraph">{{::$ctrl.movieShowInfo.director}}</p>
+    <h4 class="noltflix__inner-title">Cast</h4>
+    <p class="noltflix__paragraph">{{::$ctrl.movieShowInfo.show_cast}}</p>
+    <h4 class="noltflix__inner-title">Summary</h4>
+    <p class="noltflix__paragraph">{{::$ctrl.movieShowInfo.summary}}</p>
+  </div>
+  <a class="noltflix__btn uk-button uk-button-default" href="#">Watch now</a>
+</div>

@@ -1,6 +1,8 @@
 {
   "extends": "airbnb",
   "rules": {
+    "quotes": 0,
+    "babel/arrow-parens": 0,
     "class-methods-use-this": ["off"],
     "func-names": ["error", "never"],
     "linebreak-style": 0,

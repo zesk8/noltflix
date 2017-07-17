@@ -1,0 +1,52 @@
+.noltflix-movie-show {
+  background: {
+    repeat: no-repeat;
+    size: cover;
+  }
+  display: flex;
+  height: 100%;
+
+  &__info {
+    background-color: $dark-grey;
+    opacity: 0.95;
+    padding: 0 61px 50px 102px;
+    width: 590px;
+
+    &-head,
+    &-release {
+      align-items: baseline;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-head {
+      position: relative;
+
+      .noltflix__back {
+        bottom: 10px;
+        left: -62px;
+        position: absolute;
+      }
+    }
+
+    &-release {
+      border-bottom: 1px solid $white-25;
+      color: white;
+      height: 25px;
+      margin-top: 18px;
+      opacity: 0.75;
+      padding-bottom: 15px;
+    }
+
+    &-rate {
+      display: flex;
+      margin: 25px 0 35px;
+
+      .noltflix__star {
+        height: 28.2px;
+        margin: 0 16.3px 0 0;
+        width: 29.7px;
+      }
+    }
+  }
+}

@@ -43,6 +43,12 @@ module.exports = {
         loaders: [
           'html-loader'
         ]
+      },
+      {
+        test: /\.(jpg|png|svg)$/,
+        loaders: [
+          'file-loader?name=[path][name].[ext]&outputPath=images/'
+        ]
       }
     ]
   },

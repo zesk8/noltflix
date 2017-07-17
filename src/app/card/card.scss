@@ -1,0 +1,54 @@
+.noltflix__card {
+  background-color: $charcoal-grey;
+  box-shadow: 0 2px 8px 0 $black-25;
+  height: 274px;
+  margin: 15px 0 30px;
+  width: 275px;
+
+  &-image {
+    height: 155px;
+    width: 275px;
+  }
+
+  &-title {
+    color: $white !important;
+    font-size: 18px;
+    font-weight: 400;
+    height: 25px;
+    margin: 0 0 9px;
+  }
+
+  &-category {
+    align-items: center;
+    color: $white;
+    display: flex;
+    font-size: 14px;
+    font-weight: 300;
+    height: 19px;
+    justify-content: space-between;
+    margin-bottom: 14px !important;
+    opacity: 0.5;
+  }
+
+  &-body {
+    padding: 12px 15px 0;
+  }
+
+  &-extra-info {
+    align-items: center;
+    background-color: $charcoal-grey-three;
+    color: $white;
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    padding: 0 15px;
+
+    &-text {
+      opacity: 0.75;
+    }
+  }
+
+  &-rate {
+    display: flex;
+  }
+}

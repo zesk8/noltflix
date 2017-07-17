@@ -1,16 +1,21 @@
 <header class="noltflix-header">
-  <p class="header-title">
-    <a href="https://github.com/FountainJS/generator-fountain-webapp" target="_blank">
-      Fountain Generator
-    </a>
-  </p>
-  <p class="header-date">
-    Generated with FountainJS v1.0.0-rc2 on Sun Jul 09 2017 23:39:46 GMT-0500 (CDT)
-  </p>
-  <div class="uk-margin">
-    <form class="uk-search uk-search-default">
-        <span uk-search-icon></span>
-        <input class="uk-search-input" type="search" placeholder="Search...">
-    </form>
-</div>
+  <div class="noltflix-header__left-side">
+    <div class="noltflix-header__logo">
+    </div>
+  </div>
+  <div class="noltflix-header__right-side">
+    <div class="uk-inline noltflix-header__user-list">
+      <button class="uk-button" type="button">
+        <span class="noltflix-header__icon noltflix-header__icon--user"></span>
+        <span class="noltflix-header__user-list-name">Jhon Smith</span>
+        <span class="noltflix-header__icon noltflix-header__icon--arrow"></span>
+      </button>
+      <ul class="noltflix__dropdown noltflix-header__user-list-dropdown" uk-dropdown="mode: click">
+        <li class="noltflix__dropdown-element" ng-repeat="link in ::$ctrl.dropDownLinks">
+          <a class="noltflix__dropdown-link" ng-href="{{::link.url}}">{{::link.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <noltflix-search></noltflix-search>
+  </div>
 </header>

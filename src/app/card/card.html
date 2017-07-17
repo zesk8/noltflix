@@ -1,0 +1,24 @@
+<div class="noltflix__card uk-card uk-card-default">
+  <div class="uk-card-media-top">
+    <img class="noltflix__card-image" ng-src="{{::$ctrl.content.poster}}" alt="">
+  </div>
+  <div class="noltflix__card-body uk-card-body">
+    <h3 class="noltflix__card-title uk-card-title">{{::$ctrl.content.show_title}}</h3>
+    <div class="noltflix__card-category">
+      <span>{{::$ctrl.content.category}}</span>
+      <span>{{::$ctrl.content.runtime}}</span>
+    </div>
+  </div>
+  <div class="noltflix__card-extra-info">
+    <span class="noltflix__card-extra-info-text">
+      {{::$ctrl.content.category}} /  {{::$ctrl.content.release_year}}
+    </span>
+    <div class="noltflix__card-rate">
+      <span class="noltflix__star noltflix__star--complete"></span>
+      <span class="noltflix__star noltflix__star--complete"></span>
+      <span class="noltflix__star noltflix__star--complete"></span>
+      <span class="noltflix__star noltflix__star--complete"></span>
+      <span class="noltflix__star noltflix__star--medium"></span>
+    </div>
+  </div>
+</div>

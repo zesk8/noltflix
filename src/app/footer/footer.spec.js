@@ -1,19 +1,19 @@
 import angular from 'angular';
 import 'angular-mocks';
-import {footer} from './footer';
+import footer from './footer.component';
 
 describe('footer component', () => {
   beforeEach(() => {
     angular
-      .module('fountainFooter', ['app/footer.html'])
-      .component('fountainFooter', footer);
-    angular.mock.module('fountainFooter');
+      .module('noltflixFooter', ['app/footer/footer.html'])
+      .component('noltflixFooter', footer);
+    angular.mock.module('noltflixFooter');
   });
 
-  it('should render \'FountainJS team\'', angular.mock.inject(($rootScope, $compile) => {
-    const element = $compile('<fountain-footer></fountain-footer>')($rootScope);
+  it('should render copy', angular.mock.inject(($rootScope, $compile) => {
+    const element = $compile('<noltflix-footer></noltflix-footer>')($rootScope);
     $rootScope.$digest();
-    const footer = element.find('a');
-    expect(footer.html().trim()).toEqual('FountainJS team');
+    const footerCopy = element[0].querySelectorAll('.noltflix-footer__copy');
+    expect(footerCopy[0].innerHTML).toEqual('Copyright 2017, Lorem ipsum dolor sit amet');
   }));
 });

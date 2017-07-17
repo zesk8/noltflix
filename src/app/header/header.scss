@@ -3,4 +3,56 @@
   background-color: $red;
   box-shadow: 0 2px 8px 0 $black-25;
   display: flex;
+  height: 100px;
+  justify-content: space-between;
+  padding: 0 103px 0 102px;
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    &--arrow {
+      background: url('/images/icon-down-arrow.svg');
+      height: 5px;
+      width: 10px;
+    }
+
+    &--user {
+      background: url('/images/shape.svg');
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &__logo {
+    background: url('/images/noltflix-logo.svg');
+    height: 27px;
+    width: 159px;
+  }
+
+  &__right-side {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-list {
+    margin-right: 32px;
+    width: 175px;
+
+    &-name {
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0 8px 0 15px;
+    }
+
+    .uk-button {
+      align-items: center;
+      background-color: transparent;
+      color: $white;
+      display: -webkit-flex;
+      justify-content: center;
+      padding: 0;
+      width: 100%;
+    }
+  }
 }
