@@ -27,7 +27,7 @@ module.exports = {
         test: /\.(css|scss)$/,
         loaders: ExtractTextPlugin.extract({
           fallbackLoader: 'style-loader',
-          loader: 'css-loader?minimize!sass-loader!postcss-loader'
+          loader: 'css-loader!sass-loader!postcss-loader'
         })
       },
       {
@@ -43,6 +43,12 @@ module.exports = {
         loaders: [
           'html-loader'
         ]
+      },
+      {
+        test: /\.(jpg|png|svg)$/,
+        loaders: [
+          'file-loader?name=[path][name].[ext]&outputPath=images/'
+        ]
       }
     ]
   },
@@ -52,9 +58,6 @@ module.exports = {
     FailPlugin,
     new HtmlWebpackPlugin({
       template: conf.path.src('index.html')
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {unused: true, dead_code: true, warnings: false} // eslint-disable-line camelcase
     }),
     new ExtractTextPlugin('index-[contenthash].css'),
     new webpack.optimize.CommonsChunkPlugin({name: 'vendor'}),

@@ -2,6 +2,7 @@
   <form class="uk-search">
       <input class="uk-search-input"
         type="search"
+        ng-keyup="$ctrl.clickSearch($event)"
         placeholder="Search Media"
         ng-model="$ctrl.title">
       <span class="noltflix-search__icon" ng-click="::$ctrl.search()"></span>
@@ -10,8 +11,8 @@
         uk-dropdown="mode: click">
         <li class="noltflix__dropdown-element">
           <a class="noltflix__dropdown-link"
-            ng-href="{{::$ctrl.listResult.url}}">
-            {{::$ctrl.listResult.title}}
+            ng-href="{{$ctrl.listResult.url}}">
+            {{$ctrl.listResult.title}}
           </a>
         </li>
       </ul>
