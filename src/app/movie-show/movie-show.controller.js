@@ -6,11 +6,13 @@ class MovieShowController {
    * Constructor for MoviewShowComponent
    * @param {!angular.$state} $state
    * @param {!angular.$rootScope} $rootScope
+   * @param {NoltflixService} NoltflixService
    * @ngInject
    */
-  constructor($state, $rootScope) {
+  constructor($state, $rootScope, NoltflixService) {
     this._$state = $state;
     this._$rootScope = $rootScope;
+    this._noltflixService = NoltflixService;
     this.setMovieShow();
   }
   /**
@@ -37,11 +39,7 @@ class MovieShowController {
     this.movieShowInfo.isStored = true;
     const movieShow = this.movieShowInfo;
     // Store movieShow (only in browser)
-    // @todo: change for BE implementation
-    if (!this._$rootScope.storedMovieShows[movieShow.category]) {
-      this._$rootScope.storedMovieShows[movieShow.category] = [];
-    }
-    return this._$rootScope.storedMovieShows[movieShow.category].push(movieShow);
+    return this._noltflixService.save(movieShow);
   }
 }
 

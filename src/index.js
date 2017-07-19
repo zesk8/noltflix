@@ -7,6 +7,7 @@ import main from './app/main/main.component';
 import header from './app/header/header.component';
 import footer from './app/footer/footer.component';
 import favorites from './app/favorites/favorites.component';
+import favoritesService from './app/favorites/favorites.service';
 import card from './app/card/card.component';
 import movieShow from './app/movie-show/movie-show.component';
 import search from './app/search/search.component';
@@ -29,4 +30,5 @@ angular
   .component('noltflixFavorites', favorites)
   .component('noltflixCard', card)
   .component('noltflixMovieShow', movieShow)
-  .component('noltflixSearch', search);
+  .component('noltflixSearch', search)
+  .service('NoltflixService', favoritesService);

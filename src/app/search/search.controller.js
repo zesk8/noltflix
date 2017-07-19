@@ -4,17 +4,17 @@
 class SearchController {
   /**
    * Constructor for SearchComponent
-   * @param {!angular.$http} $http
    * @param {!angular.$rootScope} $rootScope
    * @param {!angular.$document} $document
    * @param {!angular.$timeout} $timeout
+   * @param {NoltflixService} NoltflixService
    * @ngInject
    */
-  constructor($http, $rootScope, $document, $timeout) {
-    this._$http = $http;
+  constructor($rootScope, $document, $timeout, NoltflixService) {
     this._$rootScope = $rootScope;
     this._$document = $document[0];
     this._$timeout = $timeout;
+    this._noltflixService = NoltflixService;
     this.defaultResult = {
       url: '#',
       title: 'Not found',
@@ -37,9 +37,9 @@ class SearchController {
    * Search movie show and set result to dropdown
    */
   search() {
+    const searchTitle = this.title;
     this.listResult = {};
-    this._$http
-      .get(`http://netflixroulette.net/api/api.php?title=${this.title}`)
+    this._noltflixService.getFromRoulette(searchTitle)
       .then(
         (result) => {
           const title = result.data.show_title;
