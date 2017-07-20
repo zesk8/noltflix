@@ -8,3 +8,8 @@ Application test for Nolte
 ```bash
 npm install && npm run serve
 ```
+
+## Back-end
+```bash
+cd mongo-store-noltflix && npm install && node index.js
+```
