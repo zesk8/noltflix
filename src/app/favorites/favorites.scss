@@ -15,4 +15,24 @@
       }
     }
   }
+
+  @media screen and (max-width: 767px) {
+    padding: 0;
+
+    .noltflix__title,
+    .noltflix__sub-title {
+      padding: 0 25px;
+    }
+
+    .noltflix__title {
+      font-size: 24px;
+      height: 33px;
+    }
+
+    .noltflix__sub-title {
+      font-size: 12px;
+      height: 16px;
+      margin: 15px 0 20px;
+    }
+  }
 }

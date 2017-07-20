@@ -6,10 +6,12 @@
 
   .noltflix__dropdown {
     left: 0 !important;
+    top: 33px !important;
     width: 100%;
   }
 
-  &__icon {
+  &__icon,
+  &__icon-raw {
     background: url('/images/icon-search.svg');
     cursor: pointer;
     height: 24px;

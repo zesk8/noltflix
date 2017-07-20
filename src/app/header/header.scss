@@ -55,4 +55,58 @@
       width: 100%;
     }
   }
+
+  @media screen and (max-width: 767px) {
+    height: 75px;
+    padding: 0 25px;
+
+    &__left-side {
+      display: none;
+    }
+
+    &__right-side {
+      justify-content: space-between;
+      width: 100%;
+
+      noltflix-search {
+        display: none;
+        left: 0px;
+        margin-top: 65px;
+        position: absolute;
+        width: 100vw;
+        z-index: 10;
+
+        .noltflix-search {
+          width: 100%;
+
+          .noltflix__dropdown {
+            left: 0 !important;
+            margin-top: 0;
+            top: 55px !important;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &__user-list {
+      margin: 0;
+      width: auto;
+
+      &-name,
+      .noltflix-header__icon--arrow {
+        display: none;
+      }
+
+      &-dropdown {
+        top: 27px !important;
+      }
+
+      +.noltflix-header__logo + .noltflix-search__icon-raw {
+        position: relative;
+        right: 0;
+        top: auto;
+      }
+    }
+  }
 }

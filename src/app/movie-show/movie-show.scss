@@ -49,4 +49,76 @@
       }
     }
   }
+
+  .noltflix__btn {
+    margin: 30px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    &__info {
+      width: 490px;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    &__info {
+      width: 490px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    background-size: contain;
+    flex-direction: column-reverse;
+
+    &__info {
+      opacity: 1;
+      padding: 0 25px 50px;
+      width: auto;
+
+      &-head {
+        position: relative;
+
+        .noltflix__back {
+          left: 0;
+          top: -195px;
+        }
+
+        .noltflix__heart {
+          position: absolute;
+          right: 0;
+          top: -199px;
+        }
+      }
+
+      &-release {
+        flex-direction: column;
+        height: auto;
+        margin-top: 10px;
+
+        span {
+          &:first-child {
+            margin-bottom: 10px;
+          }
+
+          &:last-child {
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      &-rate {
+        margin: 20px 0 25.8px;
+      }
+
+      .noltflix__inner-title,
+      .noltflix__paragraph {
+        margin-left: 4px;
+        margin-right: 4px;
+      }
+    }
+
+    .noltflix__btn {
+      margin: 147px 0 20px 25px;
+    }
+  }
 }

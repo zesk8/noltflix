@@ -6,6 +6,9 @@ const searchComponent = {
   controller: SearchController,
   controllerAs: '$ctrl',
   template,
+  bindings: {
+    isOpen: '=',
+  },
 };
 
 export default searchComponent;

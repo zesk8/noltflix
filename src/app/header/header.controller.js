@@ -17,6 +17,13 @@ class HeaderController {
         url: '#', name: 'Sign out',
       },
     ];
+    this.isOpenSearch = false;
+  }
+  /**
+   * Display search component
+   */
+  displaySearch() {
+    this.isOpenSearch = !this.isOpenSearch;
   }
 }
 

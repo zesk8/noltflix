@@ -16,6 +16,14 @@
         </li>
       </ul>
     </div>
-    <noltflix-search></noltflix-search>
+    <div class="noltflix-header__logo noltflix__responsive">
+    </div>
+    <span class="noltflix__responsive"
+      ng-click="::$ctrl.displaySearch()"
+      ng-class="{
+        'noltflix-search__icon-raw': !$ctrl.isOpenSearch,
+        'noltflix__close': $ctrl.isOpenSearch
+      }"></span>
+    <noltflix-search ng-class="{'noltflix__responsive--show': $ctrl.isOpenSearch}" is-open="$ctrl.isOpenSearch"></noltflix-search>
   </div>
 </header>

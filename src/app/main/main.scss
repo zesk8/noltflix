@@ -24,7 +24,7 @@ a {
     align-items: center;
     display: flex;
     height: 33px;
-    justify-content: left;
+    justify-content: flex-start;
 
     &-text {
       background-color: $charcoal-grey;
@@ -56,7 +56,6 @@ a {
     height: 88px;
     justify-content: center;
     letter-spacing: 2.3px;
-    margin: 30px;
     text-transform: uppercase;
     width: 283px;
 
@@ -69,6 +68,14 @@ a {
     &:focus {
       background-color: $deep-red;
       color: $white;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 14.6px;
+      height: 44px;
+      letter-spacing: 1.2px;
+      padding: 0;
+      width: 157px;
     }
   }
 
@@ -95,6 +102,12 @@ a {
     font-weight: 700;
     height: 44px;
     margin: 50px 0 0;
+
+    @media screen and (max-width: 767px) {
+      font-size: 36px;
+      height: 49px;
+      margin-top: 20px;
+    }
   }
 
   &__sub-title {
@@ -117,6 +130,10 @@ a {
     font-weight: 700;
     height: 25px;
     margin: 30px 0 0;
+
+    @media screen and (max-width: 767px) {
+      margin-top: 35px;
+    }
   }
 
   &__paragraph {
@@ -144,6 +161,16 @@ a {
     &--empty {
       background-image: url('/images/icon-star-empty.svg');
     }
+  }
+
+  &__close {
+    background: {
+      image: url('/images/icon-clear.svg');
+      size: cover;
+    }
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
   }
 
   &__heart {
@@ -178,6 +205,23 @@ a {
       &:hover {
         color: $white;
         font-weight: 900;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      left: -25px !important;
+      width: 100vw;
+    }
+  }
+
+  &__responsive {
+    display: none;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+
+      &--show {
+        display: block !important;
       }
     }
   }
