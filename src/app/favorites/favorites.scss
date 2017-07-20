@@ -17,7 +17,16 @@
   }
 
   @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
     padding: 0;
+
+    &__selections {
+      padding-bottom: 5px;
+
+      noltflix-card {
+        margin: 0;
+      }
+    }
 
     .noltflix__title,
     .noltflix__sub-title {

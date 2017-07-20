@@ -6,8 +6,7 @@
   width: 275px;
 
   &-image {
-    height: 155px;
-    width: 275px;
+    width: 100%;
   }
 
   &-title {
@@ -50,5 +49,58 @@
 
   &-rate {
     display: flex;
+  }
+
+  .uk-card-media-top {
+    height: 155px;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: auto;
+    margin: 0 0 20px;
+    width: 100vw;
+
+    &-image {
+      height: auto;
+    }
+
+    &-title {
+      font-size: 24px;
+      height: 33px;
+      margin-bottom: 10px;
+    }
+
+    &-body {
+      padding: 15px 25px 0;
+    }
+
+    &-category {
+      font-size: 18px;
+      height: 25px;
+      margin-bottom: 15px !important;
+    }
+
+    &-extra-info {
+      height: 50px;
+      padding: 0 25px;
+
+      &-text {
+        font-size: 18px;
+        height: 25px;
+      }
+    }
+
+    &-rate {
+      .noltflix__star {
+        height: 16.9px;
+        margin-left: 9.8px;
+        width: 17.8px;
+      }
+    }
+
+    .uk-card-media-top {
+      height: 211px;
+    }
   }
 }
